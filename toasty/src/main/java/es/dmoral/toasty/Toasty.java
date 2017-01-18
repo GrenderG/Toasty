@@ -61,11 +61,11 @@ public class Toasty {
     }
 
     public static Toast warning(@NonNull Context context, @NonNull String message) {
-        return info(context, message, Toast.LENGTH_SHORT, true);
+        return warning(context, message, Toast.LENGTH_SHORT, true);
     }
 
     public static Toast warning(@NonNull Context context, @NonNull String message, int duration) {
-        return info(context, message, duration, true);
+        return warning(context, message, duration, true);
     }
 
     public static Toast warning(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
@@ -87,11 +87,11 @@ public class Toasty {
     }
 
     public static Toast success(@NonNull Context context, @NonNull String message) {
-        return error(context, message, Toast.LENGTH_SHORT, true);
+        return success(context, message, Toast.LENGTH_SHORT, true);
     }
 
     public static Toast success(@NonNull Context context, @NonNull String message, int duration) {
-        return error(context, message, duration, true);
+        return success(context, message, duration, true);
     }
 
     public static Toast success(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {

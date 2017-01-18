@@ -22,12 +22,14 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.0'
+	compile 'com.github.GrenderG:Toasty:1.1'
 }
 ```
 
 Usage
 --
+
+Each method always returns a `Toast` object, so you can customize the Toast much more. **DON'T FORGET THE `show()` METHOD!**
 
 To display an error Toast:
 
@@ -60,7 +62,7 @@ To display the usual Toast with icon:
 Toasty.normal(yourContext, "Normal toast w/ icon", yourIconDrawable).show();
 ```
 
-You can also create your custom Toasts with the `custom` method:
+You can also create your custom Toasts with the `custom()` method:
 ``` java
 Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, tintColor, duration, withIcon, true).show();
 ```
