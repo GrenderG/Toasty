@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.GrenderG'
-version = '1.0'
+version = '1.1.1'
 
 android {
     compileSdkVersion 25
@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 25
-        versionCode 11
-        versionName "1.1"
+        versionCode 111
+        versionName "1.1.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
