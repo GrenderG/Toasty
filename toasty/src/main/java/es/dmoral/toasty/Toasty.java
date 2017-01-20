@@ -1,7 +1,6 @@
 package es.dmoral.toasty;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -10,6 +9,7 @@ import android.support.annotation.CheckResult;
 import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,6 +34,9 @@ import android.widget.Toast;
 
 @SuppressLint("InflateParams")
 public class Toasty {
+    private Toasty() {
+    }
+
     private static final @ColorInt int DEFAULT_TEXT_COLOR = Color.parseColor("#FFFFFF");
 
     private static final @ColorInt int ERROR_COLOR = Color.parseColor("#D50000");
@@ -133,7 +136,8 @@ public class Toasty {
                                @ColorInt int textColor, @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
         final Toast currentToast = new Toast(context);
-        final View toastLayout = ((Activity) context).getLayoutInflater().inflate(R.layout.toast_layout, null);
+        final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
+                .inflate(R.layout.toast_layout, null);
         final ImageView toastIcon = (ImageView) toastLayout.findViewById(R.id.toast_icon);
         final TextView toastTextView = (TextView) toastLayout.findViewById(R.id.toast_text);
         Drawable drawableFrame;

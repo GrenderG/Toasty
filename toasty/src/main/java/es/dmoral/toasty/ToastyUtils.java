@@ -28,7 +28,10 @@ import android.view.View;
  * along with Toasty.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class ToastyUtils {
+final class ToastyUtils {
+    private ToastyUtils() {
+    }
+
     static Drawable tint9PatchDrawableFrame(@NonNull Context context, @ColorInt int tintColor) {
         final NinePatchDrawable toastDrawable = (NinePatchDrawable) getDrawable(context, R.drawable.toast_frame);
         toastDrawable.setColorFilter(new PorterDuffColorFilter(tintColor, PorterDuff.Mode.SRC_IN));
