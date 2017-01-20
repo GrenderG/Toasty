@@ -34,9 +34,6 @@ import android.widget.Toast;
 
 @SuppressLint("InflateParams")
 public class Toasty {
-    private Toasty() {
-    }
-
     private static final @ColorInt int DEFAULT_TEXT_COLOR = Color.parseColor("#FFFFFF");
 
     private static final @ColorInt int ERROR_COLOR = Color.parseColor("#D50000");
@@ -45,6 +42,9 @@ public class Toasty {
     private static final @ColorInt int WARNING_COLOR = Color.parseColor("#FFA900");
 
     private static final String TOAST_TYPEFACE = "sans-serif-condensed";
+
+    private Toasty() {
+    }
 
     public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message) {
         return normal(context, message, Toast.LENGTH_SHORT, null, false);
