@@ -22,7 +22,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.1.1'
+	compile 'com.github.GrenderG:Toasty:1.1.2'
 }
 ```
 
