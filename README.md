@@ -69,6 +69,11 @@ Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, ti
 
 There are variants of each method, feel free to explore this library.
 
+Apps using Toasty
+--
+
+Want to be here? Open an `issue` or make a `pull request`.
+
 Screenshots
 --
 
