@@ -1,6 +1,10 @@
 # Toasty
 [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9) [![](https://jitpack.io/v/GrenderG/Toasty.svg)](https://jitpack.io/#GrenderG/Toasty) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Toasty-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5102)
 
+<div align="center">
+	<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/web_hi_res_512.png" width="128">
+</div>
+
 The usual Toast, but with steroids. **(Screenshots at the end of the file.)**
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
