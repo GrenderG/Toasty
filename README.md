@@ -3,9 +3,9 @@
 
 <div align="center">
 	<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/web_hi_res_512.png" width="128">
-</div>
 
-The usual Toast, but with steroids. **(Screenshots at the end of the file.)**
+	The usual Toast, but with steroids. **(Screenshots at the end of the file.)**
+</div>
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
 
