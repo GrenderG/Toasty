@@ -98,3 +98,4 @@ Screenshots
 <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr4.png" width="250">
 <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr5.png" width="250">
 <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr6.png" width="250">
+<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr7.png" width="250">
