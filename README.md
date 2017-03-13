@@ -26,7 +26,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.1.3'
+	compile 'com.github.GrenderG:Toasty:1.1.4'
 }
 ```
 
@@ -70,6 +70,8 @@ You can also create your custom Toasts with the `custom()` method:
 ``` java
 Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, tintColor, duration, withIcon, true).show();
 ```
+### Extra
+[You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L76-L93)
 
 There are variants of each method, feel free to explore this library.
 
