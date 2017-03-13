@@ -44,10 +44,21 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+        android:text="@string/info_toast_with_formatting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_info_toast"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button_info_toast_with_formatting"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
         android:text="@string/warning_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_info_toast"
+        android:layout_below="@+id/button_info_toast_with_formatting"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"

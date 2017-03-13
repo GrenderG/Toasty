@@ -46,93 +46,93 @@ public class Toasty {
     private Toasty() {
     }
 
-    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message) {
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull CharSequence message) {
         return normal(context, message, Toast.LENGTH_SHORT, null, false);
     }
 
-    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, Drawable icon) {
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull CharSequence message, Drawable icon) {
         return normal(context, message, Toast.LENGTH_SHORT, icon, true);
     }
 
-    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, int duration) {
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return normal(context, message, duration, null, false);
     }
 
-    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, int duration,
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon) {
         return normal(context, message, duration, icon, true);
     }
 
-    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, int duration,
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
         return custom(context, message, icon, DEFAULT_TEXT_COLOR, duration, withIcon);
     }
 
-    public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message) {
+    public static @CheckResult Toast warning(@NonNull Context context, @NonNull CharSequence message) {
         return warning(context, message, Toast.LENGTH_SHORT, true);
     }
 
-    public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message, int duration) {
+    public static @CheckResult Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return warning(context, message, duration, true);
     }
 
-    public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
+    public static @CheckResult Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_48dp),
                 DEFAULT_TEXT_COLOR, WARNING_COLOR, duration, withIcon, true);
     }
 
-    public static @CheckResult Toast info(@NonNull Context context, @NonNull String message) {
+    public static @CheckResult Toast info(@NonNull Context context, @NonNull CharSequence message) {
         return info(context, message, Toast.LENGTH_SHORT, true);
     }
 
-    public static @CheckResult Toast info(@NonNull Context context, @NonNull String message, int duration) {
+    public static @CheckResult Toast info(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return info(context, message, duration, true);
     }
 
-    public static @CheckResult Toast info(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
+    public static @CheckResult Toast info(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_48dp),
                 DEFAULT_TEXT_COLOR, INFO_COLOR, duration, withIcon, true);
     }
 
-    public static @CheckResult Toast success(@NonNull Context context, @NonNull String message) {
+    public static @CheckResult Toast success(@NonNull Context context, @NonNull CharSequence message) {
         return success(context, message, Toast.LENGTH_SHORT, true);
     }
 
-    public static @CheckResult Toast success(@NonNull Context context, @NonNull String message, int duration) {
+    public static @CheckResult Toast success(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return success(context, message, duration, true);
     }
 
-    public static @CheckResult Toast success(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
+    public static @CheckResult Toast success(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_check_white_48dp),
                 DEFAULT_TEXT_COLOR, SUCCESS_COLOR, duration, withIcon, true);
     }
 
-    public static @CheckResult Toast error(@NonNull Context context, @NonNull String message) {
+    public static @CheckResult Toast error(@NonNull Context context, @NonNull CharSequence message) {
         return error(context, message, Toast.LENGTH_SHORT, true);
     }
 
-    public static @CheckResult Toast error(@NonNull Context context, @NonNull String message, int duration) {
+    public static @CheckResult Toast error(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return error(context, message, duration, true);
     }
 
-    public static @CheckResult Toast error(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
+    public static @CheckResult Toast error(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_48dp),
                 DEFAULT_TEXT_COLOR, ERROR_COLOR, duration, withIcon, true);
     }
 
-    public static @CheckResult Toast custom(@NonNull Context context, @NonNull String message, Drawable icon,
+    public static @CheckResult Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int textColor, int duration, boolean withIcon) {
         return custom(context, message, icon, textColor, -1, duration, withIcon, false);
     }
 
-    public static @CheckResult Toast custom(@NonNull Context context, @NonNull String message, @DrawableRes int iconRes,
+    public static @CheckResult Toast custom(@NonNull Context context, @NonNull CharSequence message, @DrawableRes int iconRes,
                                @ColorInt int textColor, @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
         return custom(context, message, ToastyUtils.getDrawable(context, iconRes), textColor,
                 tintColor, duration, withIcon, shouldTint);
     }
 
-    public static @CheckResult Toast custom(@NonNull Context context, @NonNull String message, Drawable icon,
+    public static @CheckResult Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int textColor, @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
         final Toast currentToast = new Toast(context);
