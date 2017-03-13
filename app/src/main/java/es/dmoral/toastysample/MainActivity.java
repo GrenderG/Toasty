@@ -3,10 +3,15 @@ package es.dmoral.toastysample;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
+
+import static android.graphics.Typeface.BOLD_ITALIC;
 
 /**
  * This file is part of Toasty.
@@ -68,5 +73,22 @@ public class MainActivity extends AppCompatActivity {
                 Toasty.normal(MainActivity.this, "Normal toast w/ icon", icon).show();
             }
         });
+        findViewById(R.id.button_info_toast_with_formatting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(MainActivity.this, getFormattedMessage()).show();
+            }
+        });
+    }
+
+    private CharSequence getFormattedMessage() {
+        final String prefix = "Formatted ";
+        final String highlight = "bold italic";
+        final String suffix = " text";
+        SpannableStringBuilder ssb = new SpannableStringBuilder(prefix).append(highlight).append(suffix);
+        int prefixLen = prefix.length();
+        ssb.setSpan(new StyleSpan(BOLD_ITALIC),
+                prefixLen, prefixLen + highlight.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        return ssb;
     }
 }

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Toasty Sample</string>
+    <string name="normal_toast_with_icon">NORMAL TOAST (WITH ICON)</string>
+    <string name="normal_toast_without_icon">NORMAL TOAST (WITHOUT ICON)</string>
+    <string name="warning_toast">WARNING TOAST</string>
+    <string name="info_toast">INFO TOAST</string>
+    <string name="info_toast_with_formatting">INFO TOAST WITH FORMATTING</string>
+    <string name="error_toast">ERROR TOAST</string>
+    <string name="success_toast">SUCCESS TOAST</string>
 </resources>
