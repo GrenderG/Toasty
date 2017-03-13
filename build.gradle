@@ -26,6 +26,9 @@ ext {
     targetSdkVersion = compileSdkVersion
 
     supportLibVersion = '25.2.0'
+
+    versionCode = 114
+    versionName = '1.1.4'
 }
 
 task clean(type: Delete) {
