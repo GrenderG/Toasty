@@ -11,7 +11,7 @@
     tools:context="es.dmoral.toastysample.MainActivity">
 
     <Button
-        android:text="ERROR TOAST"
+        android:text="@string/error_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="SUCCESS TOAST"
+        android:text="@string/success_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_error_toast"
@@ -33,7 +33,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="INFO TOAST"
+        android:text="@string/info_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_success_toast"
@@ -44,7 +44,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="WARNING TOAST"
+        android:text="@string/warning_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_info_toast"
@@ -55,7 +55,7 @@
         android:id="@+id/button_warning_toast" />
 
     <Button
-        android:text="NORMAL TOAST (WITHOUT ICON)"
+        android:text="@string/normal_toast_without_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_warning_toast"
@@ -66,7 +66,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="NORMAL TOAST (WITH ICON)"
+        android:text="@string/normal_toast_with_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_normal_toast_wo_icon"
