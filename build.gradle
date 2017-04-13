@@ -25,10 +25,10 @@ ext {
     minSdkVersion = 9
     targetSdkVersion = compileSdkVersion
 
-    supportLibVersion = '25.2.0'
+    supportLibVersion = '25.3.1'
 
-    versionCode = 114
-    versionName = '1.1.4'
+    versionCode = 115
+    versionName = '1.1.5'
 }
 
 task clean(type: Delete) {
