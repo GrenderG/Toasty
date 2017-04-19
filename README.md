@@ -68,7 +68,7 @@ Toasty.normal(yourContext, "Normal toast w/ icon", yourIconDrawable).show();
 
 You can also create your custom Toasts with the `custom()` method:
 ``` java
-Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, tintColor, duration, withIcon, true).show();
+Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, tintColor, duration, withIcon, shouldTint).show();
 ```
 ### Extra
 [You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L76-L93)
