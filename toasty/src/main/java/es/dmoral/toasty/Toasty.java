@@ -178,7 +178,7 @@ public class Toasty {
         if (withIcon) {
             if (icon == null)
                 throw new IllegalArgumentException("Avoid passing 'icon' as null if 'withIcon' is set to true");
-            ToastyUtils.setBackground(toastIcon, icon);
+            ToastyUtils.setBackground(toastIcon, ToastyUtils.tintIcon(icon, DEFAULT_TEXT_COLOR));
         } else
             toastIcon.setVisibility(View.GONE);
 
