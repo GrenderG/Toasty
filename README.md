@@ -18,20 +18,33 @@ allprojects {
 }
 ```
 
-Dependency
---
+## Dependency
 
 Add this to your module's `build.gradle` file (make sure the version matches the JitPack badge above):
 
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.1.5'
+	compile 'com.github.GrenderG:Toasty:1.2.0'
 }
 ```
 
-Usage
---
+## Configuration
+
+This step is optional, but if you want you can configure some Toasty parameters. Place this anywhere in your app:
+
+```java
+Toasty.Config.getInstance()
+    .setErrorColor(@ColorInt int errorColor) // optional
+    .setInfoColor(@ColorInt int infoColor) // optional
+    .setSuccessColor(@ColorInt int successColor) // optional
+    .setWarningColor(@ColorInt int warningColor) // optional
+    .setTextColor(@ColorInt int textColor) // optional
+    .setToastTypeface(AssetManager assetManager, String fontPath) // optional
+    .apply(); // required
+```
+
+## Usage
 
 Each method always returns a `Toast` object, so you can customize the Toast much more. **DON'T FORGET THE `show()` METHOD!**
 
@@ -68,7 +81,8 @@ Toasty.normal(yourContext, "Normal toast w/ icon", yourIconDrawable).show();
 
 You can also create your custom Toasts with the `custom()` method:
 ``` java
-Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, textColor, tintColor, duration, withIcon, shouldTint).show();
+Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, tintColor, duration, withIcon, 
+shouldTint).show();
 ```
 ### Extra
 [You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L76-L93)
