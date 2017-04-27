@@ -109,9 +109,8 @@ Want to be here? Open an `issue` or make a `pull request`.
 	</tr>
 </table>
 
-Screenshots
---
+## Screenshots
 
-Please click the image below to enlarge.
+**Please click the image below to enlarge.**
 
 <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/collage.png">
