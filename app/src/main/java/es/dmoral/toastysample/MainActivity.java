@@ -31,7 +31,6 @@ import static android.graphics.Typeface.BOLD_ITALIC;
  */
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
