@@ -112,10 +112,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 Screenshots
 --
 
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_1.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_2.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_3.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_4.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_5.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_6.png" width="250">
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr_7.png" width="250">
+Please click the image below to enlarge.
+
+<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/collage.png">
