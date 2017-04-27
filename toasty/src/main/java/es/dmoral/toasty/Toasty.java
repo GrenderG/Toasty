@@ -77,7 +77,7 @@ public class Toasty {
     @CheckResult
     public static Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, message, icon, DEFAULT_TEXT_COLOR, duration, withIcon);
+        return custom(context, message, icon, duration, withIcon);
     }
 
     @CheckResult
@@ -93,7 +93,7 @@ public class Toasty {
     @CheckResult
     public static Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_48dp),
-                DEFAULT_TEXT_COLOR, WARNING_COLOR, duration, withIcon, true);
+                WARNING_COLOR, duration, withIcon, true);
     }
 
     @CheckResult
@@ -109,7 +109,7 @@ public class Toasty {
     @CheckResult
     public static Toast info(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_48dp),
-                DEFAULT_TEXT_COLOR, INFO_COLOR, duration, withIcon, true);
+                INFO_COLOR, duration, withIcon, true);
     }
 
     @CheckResult
@@ -125,7 +125,7 @@ public class Toasty {
     @CheckResult
     public static Toast success(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_check_white_48dp),
-                DEFAULT_TEXT_COLOR, SUCCESS_COLOR, duration, withIcon, true);
+               SUCCESS_COLOR, duration, withIcon, true);
     }
 
     @CheckResult
@@ -141,26 +141,26 @@ public class Toasty {
     @CheckResult
     public static Toast error(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_48dp),
-                DEFAULT_TEXT_COLOR, ERROR_COLOR, duration, withIcon, true);
+                ERROR_COLOR, duration, withIcon, true);
     }
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
-                               @ColorInt int textColor, int duration, boolean withIcon) {
-        return custom(context, message, icon, textColor, -1, duration, withIcon, false);
+                               int duration, boolean withIcon) {
+        return custom(context, message, icon, -1, duration, withIcon, false);
     }
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, @DrawableRes int iconRes,
-                               @ColorInt int textColor, @ColorInt int tintColor, int duration,
+                               @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
-        return custom(context, message, ToastyUtils.getDrawable(context, iconRes), textColor,
+        return custom(context, message, ToastyUtils.getDrawable(context, iconRes),
                 tintColor, duration, withIcon, shouldTint);
     }
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
-                               @ColorInt int textColor, @ColorInt int tintColor, int duration,
+                               @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
         final Toast currentToast = new Toast(context);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
@@ -182,7 +182,7 @@ public class Toasty {
         } else
             toastIcon.setVisibility(View.GONE);
 
-        toastTextView.setTextColor(textColor);
+        toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setText(message);
         if (assetManager == null)
             toastTextView.setTypeface(Typeface.create(TOAST_TYPEFACE, Typeface.NORMAL));

@@ -7,4 +7,5 @@
     <string name="info_toast_with_formatting">INFO TOAST WITH FORMATTING</string>
     <string name="error_toast">ERROR TOAST</string>
     <string name="success_toast">SUCCESS TOAST</string>
+    <string name="custom_configuration">CUSTOM CONFIGURATION</string>
 </resources>

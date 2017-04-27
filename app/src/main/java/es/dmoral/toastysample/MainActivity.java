@@ -80,6 +80,18 @@ public class MainActivity extends AppCompatActivity {
                 Toasty.info(MainActivity.this, getFormattedMessage()).show();
             }
         });
+        findViewById(R.id.button_custom_config).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.Config.getInstance()
+                        .setTextColor(Color.GREEN)
+                        .setToastTypeface(getAssets(), "PCap Terminal.otf")
+                        .apply();
+                Toasty.custom(MainActivity.this, "sudo kill -9 everyone", getResources().getDrawable(R.drawable.laptop512),
+                        Color.BLACK, Toast.LENGTH_SHORT, true, true).show();
+                Toasty.Config.reset(); // Use this if you want to use the configuration above only once
+            }
+        });
     }
 
     private CharSequence getFormattedMessage() {
