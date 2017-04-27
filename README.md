@@ -87,7 +87,7 @@ shouldTint).show();
 ### Extra
 [You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L76-L93)
 
-There are variants of each method, feel free to explore this library.
+**There are variants of each method, feel free to explore this library.**
 
 Apps using Toasty
 --
