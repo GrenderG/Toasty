@@ -25,7 +25,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.2.0'
+	compile 'com.github.GrenderG:Toasty:1.2.1'
 }
 ```
 
@@ -40,8 +40,15 @@ Toasty.Config.getInstance()
     .setSuccessColor(@ColorInt int successColor) // optional
     .setWarningColor(@ColorInt int warningColor) // optional
     .setTextColor(@ColorInt int textColor) // optional
+    .tintIcon(boolean tintIcon) // optional (apply textColor also to the icon)
     .setToastTypeface(AssetManager assetManager, String fontPath) // optional
     .apply(); // required
+```
+
+You can reset the configuration by using `reset()` method:
+
+```java
+Toasty.Config.reset();
 ```
 
 ## Usage
