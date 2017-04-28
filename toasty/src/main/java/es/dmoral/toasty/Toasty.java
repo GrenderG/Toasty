@@ -235,6 +235,7 @@ public class Toasty {
             Toasty.WARNING_COLOR = Color.parseColor("#FFA900");
             Toasty.assetManager = null;
             Toasty.TOAST_TYPEFACE = "sans-serif-condensed";
+            Toasty.tintIcon = true;
         }
 
         @CheckResult
