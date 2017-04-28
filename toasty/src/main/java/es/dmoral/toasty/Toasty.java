@@ -48,6 +48,7 @@ public class Toasty {
 
     private static String TOAST_TYPEFACE = "sans-serif-condensed";
     private static AssetManager assetManager = null;
+    private static boolean tintIcon = true;
 
     private Toasty() {
         // avoiding instantiation
@@ -178,9 +179,12 @@ public class Toasty {
         if (withIcon) {
             if (icon == null)
                 throw new IllegalArgumentException("Avoid passing 'icon' as null if 'withIcon' is set to true");
-            ToastyUtils.setBackground(toastIcon, ToastyUtils.tintIcon(icon, DEFAULT_TEXT_COLOR));
-        } else
+            if (tintIcon)
+                icon = ToastyUtils.tintIcon(icon, DEFAULT_TEXT_COLOR);
+            ToastyUtils.setBackground(toastIcon, icon);
+        } else {
             toastIcon.setVisibility(View.GONE);
+        }
 
         toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setText(message);
@@ -210,6 +214,7 @@ public class Toasty {
 
         private String TOAST_TYPEFACE = Toasty.TOAST_TYPEFACE;
         private AssetManager assetManager = Toasty.assetManager;
+        private boolean tintIcon = Toasty.tintIcon;
 
         private Config() {
             // avoiding instantiation
@@ -276,6 +281,12 @@ public class Toasty {
             return this;
         }
 
+        @CheckResult
+        public Config tintIcon(boolean tintIcon) {
+            this.tintIcon = tintIcon;
+            return this;
+        }
+
         public void apply() {
             Toasty.DEFAULT_TEXT_COLOR = DEFAULT_TEXT_COLOR;
             Toasty.ERROR_COLOR = ERROR_COLOR;
@@ -284,6 +295,7 @@ public class Toasty {
             Toasty.WARNING_COLOR = WARNING_COLOR;
             Toasty.assetManager = assetManager;
             Toasty.TOAST_TYPEFACE = TOAST_TYPEFACE;
+            Toasty.tintIcon = tintIcon;
             configInstance = null;
         }
     }
