@@ -40,6 +40,7 @@ Toasty.Config.getInstance()
     .setSuccessColor(@ColorInt int successColor) // optional
     .setWarningColor(@ColorInt int warningColor) // optional
     .setTextColor(@ColorInt int textColor) // optional
+    .tintIcon(boolean tintIcon) // optional (apply textColor also to the icon)
     .setToastTypeface(AssetManager assetManager, String fontPath) // optional
     .apply(); // required
 ```
