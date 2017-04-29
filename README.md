@@ -92,7 +92,7 @@ Toasty.custom(yourContext, "I'm a custom Toast", yourIconDrawable, tintColor, du
 shouldTint).show();
 ```
 ### Extra
-[You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L97-L106)
+[You can pass formatted text to Toasty!](https://github.com/GrenderG/Toasty/blob/master/app/src/main/java/es/dmoral/toastysample/MainActivity.java#L98-L107)
 
 **There are variants of each method, feel free to explore this library.**
 
