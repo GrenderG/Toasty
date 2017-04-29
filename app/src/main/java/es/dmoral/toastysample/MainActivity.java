@@ -1,6 +1,7 @@
 package es.dmoral.toastysample;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toasty.Config.getInstance()
                         .setTextColor(Color.GREEN)
-                        .setToastTypeface(getAssets(), "PCap Terminal.otf")
+                        .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
                         .apply();
                 Toasty.custom(MainActivity.this, "sudo kill -9 everyone", getResources().getDrawable(R.drawable.laptop512),
                         Color.BLACK, Toast.LENGTH_SHORT, true, true).show();

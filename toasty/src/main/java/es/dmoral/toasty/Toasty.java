@@ -2,7 +2,6 @@ package es.dmoral.toasty;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -46,8 +45,9 @@ public class Toasty {
     @ColorInt
     private static int WARNING_COLOR = Color.parseColor("#FFA900");
 
-    private static String TOAST_TYPEFACE = "sans-serif-condensed";
-    private static AssetManager assetManager = null;
+    private static final Typeface LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
+    private static Typeface currentTypeface = LOADED_TOAST_TYPEFACE;
+
     private static boolean tintIcon = true;
 
     private Toasty() {
@@ -188,10 +188,7 @@ public class Toasty {
 
         toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setText(message);
-        if (assetManager == null)
-            toastTextView.setTypeface(Typeface.create(TOAST_TYPEFACE, Typeface.NORMAL));
-        else
-            toastTextView.setTypeface(Typeface.createFromAsset(assetManager, TOAST_TYPEFACE));
+        toastTextView.setTypeface(currentTypeface);
 
         currentToast.setView(toastLayout);
         currentToast.setDuration(duration);
@@ -199,8 +196,6 @@ public class Toasty {
     }
 
     public static class Config {
-        private static Config configInstance;
-
         @ColorInt
         private int DEFAULT_TEXT_COLOR = Toasty.DEFAULT_TEXT_COLOR;
         @ColorInt
@@ -212,8 +207,8 @@ public class Toasty {
         @ColorInt
         private int WARNING_COLOR = Toasty.WARNING_COLOR;
 
-        private String TOAST_TYPEFACE = Toasty.TOAST_TYPEFACE;
-        private AssetManager assetManager = Toasty.assetManager;
+        private Typeface typeface = Toasty.currentTypeface;
+
         private boolean tintIcon = Toasty.tintIcon;
 
         private Config() {
@@ -222,9 +217,7 @@ public class Toasty {
 
         @CheckResult
         public static Config getInstance() {
-            if (configInstance == null)
-                configInstance = new Config();
-            return configInstance;
+            return new Config();
         }
 
         public static void reset() {
@@ -233,8 +226,7 @@ public class Toasty {
             Toasty.INFO_COLOR = Color.parseColor("#3F51B5");
             Toasty.SUCCESS_COLOR = Color.parseColor("#388E3C");
             Toasty.WARNING_COLOR = Color.parseColor("#FFA900");
-            Toasty.assetManager = null;
-            Toasty.TOAST_TYPEFACE = "sans-serif-condensed";
+            Toasty.currentTypeface = LOADED_TOAST_TYPEFACE;
             Toasty.tintIcon = true;
         }
 
@@ -269,16 +261,8 @@ public class Toasty {
         }
 
         @CheckResult
-        public Config setToastTypeface(AssetManager assetManager, @NonNull String fontPath) {
-            this.assetManager = assetManager;
-            TOAST_TYPEFACE = fontPath;
-            return this;
-        }
-
-        @CheckResult
-        public Config setToastTypeface(@NonNull String toastTypefaceFamily) {
-            this.assetManager = null;
-            TOAST_TYPEFACE = toastTypefaceFamily;
+        public Config setToastTypeface(@NonNull Typeface typeface) {
+            this.typeface = typeface;
             return this;
         }
 
@@ -294,10 +278,8 @@ public class Toasty {
             Toasty.INFO_COLOR = INFO_COLOR;
             Toasty.SUCCESS_COLOR = SUCCESS_COLOR;
             Toasty.WARNING_COLOR = WARNING_COLOR;
-            Toasty.assetManager = assetManager;
-            Toasty.TOAST_TYPEFACE = TOAST_TYPEFACE;
+            Toasty.currentTypeface = typeface;
             Toasty.tintIcon = tintIcon;
-            configInstance = null;
         }
     }
 }
