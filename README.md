@@ -7,6 +7,8 @@
 
 The usual Toast, but with steroids. **(Screenshots at the end of the file.)**
 
+## Prerequisites
+
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
 
 ```gradle
