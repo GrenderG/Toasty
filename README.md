@@ -27,7 +27,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:Toasty:1.2.3'
+	compile 'com.github.GrenderG:Toasty:1.2.5'
 }
 ```
 
@@ -44,6 +44,7 @@ Toasty.Config.getInstance()
     .setTextColor(@ColorInt int textColor) // optional
     .tintIcon(boolean tintIcon) // optional (apply textColor also to the icon)
     .setToastTypeface(@NonNull Typeface typeface) // optional
+    .setTextSize(int sizeInSp) // optional
     .apply(); // required
 ```
 
