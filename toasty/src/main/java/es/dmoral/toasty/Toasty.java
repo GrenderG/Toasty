@@ -9,6 +9,7 @@ import android.support.annotation.CheckResult;
 import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -44,9 +45,12 @@ public class Toasty {
     private static int SUCCESS_COLOR = Color.parseColor("#388E3C");
     @ColorInt
     private static int WARNING_COLOR = Color.parseColor("#FFA900");
+    @ColorInt
+    private static int NORMAL_COLOR = Color.parseColor("#353A3E");
 
     private static final Typeface LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
     private static Typeface currentTypeface = LOADED_TOAST_TYPEFACE;
+    private static int textSize = 16; // in SP
 
     private static boolean tintIcon = true;
 
@@ -78,7 +82,7 @@ public class Toasty {
     @CheckResult
     public static Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, message, icon, duration, withIcon);
+        return custom(context, message, icon, NORMAL_COLOR, duration, withIcon, true);
     }
 
     @CheckResult
@@ -189,6 +193,7 @@ public class Toasty {
         toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setText(message);
         toastTextView.setTypeface(currentTypeface);
+        toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 
         currentToast.setView(toastLayout);
         currentToast.setDuration(duration);
@@ -208,6 +213,7 @@ public class Toasty {
         private int WARNING_COLOR = Toasty.WARNING_COLOR;
 
         private Typeface typeface = Toasty.currentTypeface;
+        private int textSize = Toasty.textSize;
 
         private boolean tintIcon = Toasty.tintIcon;
 
@@ -227,6 +233,7 @@ public class Toasty {
             Toasty.SUCCESS_COLOR = Color.parseColor("#388E3C");
             Toasty.WARNING_COLOR = Color.parseColor("#FFA900");
             Toasty.currentTypeface = LOADED_TOAST_TYPEFACE;
+            Toasty.textSize = 16;
             Toasty.tintIcon = true;
         }
 
@@ -267,6 +274,12 @@ public class Toasty {
         }
 
         @CheckResult
+        public Config setTextSize(int sizeInSp) {
+            this.textSize = sizeInSp;
+            return this;
+        }
+
+        @CheckResult
         public Config tintIcon(boolean tintIcon) {
             this.tintIcon = tintIcon;
             return this;
@@ -279,6 +292,7 @@ public class Toasty {
             Toasty.SUCCESS_COLOR = SUCCESS_COLOR;
             Toasty.WARNING_COLOR = WARNING_COLOR;
             Toasty.currentTypeface = typeface;
+            Toasty.textSize = textSize;
             Toasty.tintIcon = tintIcon;
         }
     }
