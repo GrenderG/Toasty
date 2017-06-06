@@ -125,6 +125,10 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><img src="https://lh3.googleusercontent.com/rXB22UBHujsK2uYpN-kAkVFBjTcnAp6ltSZYf9-LdYvRkM-kF-xtwPwR8kEInhludA" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.fa.daily.free">Daily – News flipped around</a></td>
 	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/ISQPSPA__uWU4Csw4N0quI0IPi_WcWN0pY4PK86yljf39vaCObvohT9ak2ubQ7iLDQ" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.fa.daily.free">Oz! Comic Reader</a></td>
+	</tr>
 </table>
 
 ## Screenshots
