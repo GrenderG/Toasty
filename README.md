@@ -127,7 +127,7 @@ Want to be here? Open an `issue` or make a `pull request`.
 	</tr>
 	<tr>
 		<td><img src="https://lh3.googleusercontent.com/ISQPSPA__uWU4Csw4N0quI0IPi_WcWN0pY4PK86yljf39vaCObvohT9ak2ubQ7iLDQ" width="64"/></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.fa.daily.free">Oz! Comic Reader</a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=es.jmoral.ozreader">Oz! Comic Reader</a></td>
 	</tr>
 </table>
 
