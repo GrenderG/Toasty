@@ -5,7 +5,7 @@
 	<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/web_hi_res_512.png" width="128">
 </div>
 
-The usual Toast, but with steroids. **(Screenshots at the end of the file.)**
+The usual Toast, but with steroids.
 
 ## Prerequisites
 
@@ -99,6 +99,12 @@ shouldTint).show();
 
 **There are variants of each method, feel free to explore this library.**
 
+## Screenshots
+
+**Please click the image below to enlarge.**
+
+<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/collage.png">
+
 Apps using Toasty
 --
 
@@ -130,17 +136,11 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=es.jmoral.ozreader">Oz! Comic Reader</a></td>
 	</tr>
 	<tr>
-		<td><img src="https://lh3.googleusercontent.com/KxzCiu-csleONAW9kfAYBCaCe4iAnhyO1ziuKjKK_yEDE0xPQMfy_-sYVYkj4RBE-Srt=w300-rw" width="64"/></td>
+		<td><img src="https://lh3.googleusercontent.com/KxzCiu-csleONAW9kfAYBCaCe4iAnhyO1ziuKjKK_yEDE0xPQMfy_-sYVYkj4RBE-Srt" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.andreacioccarelli.impactor">Impactor Unroot</a></td>
 	</tr>
 	<tr>
-		<td><img src="https://lh3.googleusercontent.com/7e0iTo60TJXz6U-zQl6pXcfgRCLifQaTp_DczwNA5ZSnrEssBwH6K0MU88gC9BzQlMY=w300-rw" width="64"/></td>
+		<td><img src="https://lh3.googleusercontent.com/7e0iTo60TJXz6U-zQl6pXcfgRCLifQaTp_DczwNA5ZSnrEssBwH6K0MU88gC9BzQlMY" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.andreacioccarelli.fusemounter">Fusemounter</a></td>
 	</tr>
 </table>
-
-## Screenshots
-
-**Please click the image below to enlarge.**
-
-<img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/collage.png">
