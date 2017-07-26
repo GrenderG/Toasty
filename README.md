@@ -112,10 +112,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 
 <table>
 	<tr>
-		<td><img src="https://lh3.googleusercontent.com/gdGrQHkHsfRAY9ivf8wt9vgaX9KPxpFHdFq5AXY_zw2P8Wat3KNstvf-BkNaKrNX8Qg=w300-rw" width="64"/></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords">BlueWords</a></td>
-	</tr>
-	<tr>
 		<td><img src="https://lh3.googleusercontent.com/vmch41lYF_TKb1MKgtYrSgz2rKQ4T1EnGRCGpWSMqLRSzi_pgNWoZpw9WJE8UV4t614" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.trivisionzero.chromophoto">ChromoPhoto - Colorize B&W</a></td>
 	</tr>
@@ -146,5 +142,13 @@ Want to be here? Open an `issue` or make a `pull request`.
 	<tr>
 		<td><img src="https://lh3.googleusercontent.com/7e0iTo60TJXz6U-zQl6pXcfgRCLifQaTp_DczwNA5ZSnrEssBwH6K0MU88gC9BzQlMY" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.andreacioccarelli.fusemounter">Fusemounter</a></td>
+	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/gdGrQHkHsfRAY9ivf8wt9vgaX9KPxpFHdFq5AXY_zw2P8Wat3KNstvf-BkNaKrNX8Qg" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords">BlueWords</a></td>
+	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/ipeHvI63HPVwGK3VmyP-flSbTDoh2q93Fte-xwYKgf4OTsEvjC_wqUfKSejjAWZElS8p" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.photos">Levipic - Photo Gallery & Map</a></td>
 	</tr>
 </table>
