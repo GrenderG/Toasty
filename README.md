@@ -111,17 +111,6 @@ Apps using Toasty
 Want to be here? Open an `issue` or make a `pull request`.
 
 <table>
-
-<tr>
-		<td><img src="https://lh3.googleusercontent.com/RL082J8D9AyVJdyoT8sN8Mb47LUJEn3ssvp8jgrke_K_sWAXgEl9F8tjudqDoL7y5A0=w300" width="64"/></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.makilite">Maki for Facebook & Twitter</a></td>
-	</tr>
-	
-	<tr>
-		<td><img src="https://lh3.googleusercontent.com/u4zbQiMobr58biVKT67ka1N-cU_URBAdD6MDU2fGQYsWePvqH9UncMpGnWAFzczfSA=w300" width="64"/></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva">Eva: Everything for Telegram</a></td>
-	</tr>
-
 	<tr>
 		<td><img src="https://lh3.googleusercontent.com/vmch41lYF_TKb1MKgtYrSgz2rKQ4T1EnGRCGpWSMqLRSzi_pgNWoZpw9WJE8UV4t614" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.trivisionzero.chromophoto">ChromoPhoto - Colorize B&W</a></td>
@@ -161,5 +150,13 @@ Want to be here? Open an `issue` or make a `pull request`.
 	<tr>
 		<td><img src="https://lh3.googleusercontent.com/ipeHvI63HPVwGK3VmyP-flSbTDoh2q93Fte-xwYKgf4OTsEvjC_wqUfKSejjAWZElS8p" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.photos">Levipic - Photo Gallery & Map</a></td>
+	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/RL082J8D9AyVJdyoT8sN8Mb47LUJEn3ssvp8jgrke_K_sWAXgEl9F8tjudqDoL7y5A0=w300" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.makilite">Maki for Facebook & Twitter</a></td>
+	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/u4zbQiMobr58biVKT67ka1N-cU_URBAdD6MDU2fGQYsWePvqH9UncMpGnWAFzczfSA=w300" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva">Eva: Everything for Telegram</a></td>
 	</tr>
 </table>
