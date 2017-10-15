@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         button_custom_config.setOnClickListener {
-            Toasty.Config.getInstance().apply {
+            Toasty.Config.instance.apply {
                 setTextColor(Color.GREEN)
                 setToastTypeface(Typeface.createFromAsset(assets, "PCap Terminal.otf"))
                 apply()
