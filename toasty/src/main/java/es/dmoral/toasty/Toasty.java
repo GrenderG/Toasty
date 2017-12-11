@@ -163,15 +163,16 @@ public class Toasty {
                 tintColor, duration, withIcon, shouldTint);
     }
 
+    @SuppressLint("ShowToast")
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
-        final Toast currentToast = new Toast(context);
+        final Toast currentToast = Toast.makeText(context, null, duration);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.toast_layout, null);
-        final ImageView toastIcon = (ImageView) toastLayout.findViewById(R.id.toast_icon);
-        final TextView toastTextView = (TextView) toastLayout.findViewById(R.id.toast_text);
+        final ImageView toastIcon = toastLayout.findViewById(R.id.toast_icon);
+        final TextView toastTextView = toastLayout.findViewById(R.id.toast_text);
         Drawable drawableFrame;
 
         if (shouldTint)
@@ -190,13 +191,12 @@ public class Toasty {
             toastIcon.setVisibility(View.GONE);
         }
 
-        toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setText(message);
+        toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setTypeface(currentTypeface);
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 
         currentToast.setView(toastLayout);
-        currentToast.setDuration(duration);
         return currentToast;
     }
 
