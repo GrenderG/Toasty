@@ -163,4 +163,8 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><img src="https://lh3.googleusercontent.com/zhky42kxZcdlt1u7D6lzc3Mwq0gV0nTiFdm-T3DygQVcNPOofNba3Q2_MWtqoJFgdF8a=w300" width="64"/></td>
 		<td><a href="https://play.google.com/store/apps/details?id=org.imperium.imperious.Pastebin">Pastebin</a></td>
 	</tr>
+		<tr>
+		<td><img src="https://lh3.googleusercontent.com/nyB12hF6cPHBrm532qQQslvj-X-klmPlKuQ4Z0MYKDpt4sPVZmWYRZ_SShEfVcTmhg=w300" width="64"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.KillerBLS.modpeide">ModPE IDE</a></td>
+	</tr>
 </table>
