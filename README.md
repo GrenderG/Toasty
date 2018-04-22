@@ -168,7 +168,11 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=com.KillerBLS.modpeide">ModPE IDE</a></td>
 	</tr>
 		<tr>
-            <td><a href="https://github.com/searchy2/Rocket-Notes"><img src="https://lh3.googleusercontent.com/tYGJBG8mc7lwC0ZxQUxif2FVMFI8L8xRkPON0ytkWVPTI67ggkrgDl3JpRu9jW0W3sLJ=w64"/></a></td>
-		<td><a href="https://github.com/searchy2/Rocket-Notes">Rocket Notes</a></td>
+            <td><a href="https://play.google.com/store/apps/details?id=stream.rocketnotes"><img src="https://lh3.googleusercontent.com/tYGJBG8mc7lwC0ZxQUxif2FVMFI8L8xRkPON0ytkWVPTI67ggkrgDl3JpRu9jW0W3sLJ=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=stream.rocketnotes">Rocket Notes</a></td>
+	</tr>
+	<tr>
+            <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/XP-tvaGf-as9XMQ3kcUjohSZlSD7uyf_AcHsjq6jTI0chXWK1yQrnJJs2Y_Pvbe1FRQ=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub">OpenHub for GitHub</a></td>
 	</tr>
 </table>
