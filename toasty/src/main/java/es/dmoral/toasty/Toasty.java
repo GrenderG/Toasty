@@ -168,7 +168,7 @@ public class Toasty {
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
-        final Toast currentToast = new Toast(context);
+        final Toast currentToast = Toast.makeText(context, "", duration);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.toast_layout, null);
         final ImageView toastIcon = toastLayout.findViewById(R.id.toast_icon);
@@ -196,7 +196,6 @@ public class Toasty {
         toastTextView.setTypeface(currentTypeface);
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 
-        currentToast.setDuration(duration);
         currentToast.setView(toastLayout);
         return currentToast;
     }
