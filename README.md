@@ -175,4 +175,12 @@ Want to be here? Open an `issue` or make a `pull request`.
             <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/XP-tvaGf-as9XMQ3kcUjohSZlSD7uyf_AcHsjq6jTI0chXWK1yQrnJJs2Y_Pvbe1FRQ=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub">OpenHub for GitHub</a></td>
 	</tr>
+		<tr>
+            <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/cRV9ytg3rXnfNPBgpZLe0EJr2C8oF5VmZxipRDgFY0xJAl_cZ6JGxM90r4x_BNZbfsgn=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=nl.overnightprojects.wakification">Wakification</a></td>
+	</tr>
+		<tr>
+            <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/muPax5lA3VC7LLIgFVYkO3zCqvW2qCG-6QVPLZHYDdCqrGAHRmE_-4PQN7zVohh4JnQ=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.controle.developer.hipercontrole">AUTO Controle</a></td>
+	</tr>
 </table>
