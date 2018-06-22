@@ -105,6 +105,12 @@ shouldTint).show();
 
 <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/collage.png">
 
+## Third Party Bindings
+
+### React Native
+You may now use this library with [React Native](https://github.com/facebook/react-native) via the module [here](https://github.com/prscX/react-native-toasty)
+
+
 Apps using Toasty
 --
 
