@@ -41,38 +41,38 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_error_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.error(MainActivity.this, "This is an error toast.", Toast.LENGTH_SHORT, true).show();
+                Toasty.error(MainActivity.this, R.string.error_message, Toast.LENGTH_SHORT, true).show();
             }
         });
         findViewById(R.id.button_success_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.success(MainActivity.this, "Success!", Toast.LENGTH_SHORT, true).show();
+                Toasty.success(MainActivity.this, R.string.success_message, Toast.LENGTH_SHORT, true).show();
             }
         });
         findViewById(R.id.button_info_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(MainActivity.this, "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(MainActivity.this, R.string.info_message, Toast.LENGTH_SHORT, true).show();
             }
         });
         findViewById(R.id.button_warning_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.warning(MainActivity.this, "Beware of the dog.", Toast.LENGTH_SHORT, true).show();
+                Toasty.warning(MainActivity.this, R.string.warning_message, Toast.LENGTH_SHORT, true).show();
             }
         });
         findViewById(R.id.button_normal_toast_wo_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.normal(MainActivity.this, "Normal toast w/o icon").show();
+                Toasty.normal(MainActivity.this, R.string.normal_message_without_icon).show();
             }
         });
         findViewById(R.id.button_normal_toast_w_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable icon = getResources().getDrawable(R.drawable.ic_pets_white_48dp);
-                Toasty.normal(MainActivity.this, "Normal toast w/ icon", icon).show();
+                Toasty.normal(MainActivity.this, R.string.normal_message_with_icon, icon).show();
             }
         });
         findViewById(R.id.button_info_toast_with_formatting).setOnClickListener(new View.OnClickListener() {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                         .setTextColor(Color.GREEN)
                         .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
                         .apply();
-                Toasty.custom(MainActivity.this, "sudo kill -9 everyone", getResources().getDrawable(R.drawable.laptop512),
+                Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
                         Color.BLACK, Toast.LENGTH_SHORT, true, true).show();
                 Toasty.Config.reset(); // Use this if you want to use the configuration above only once
             }
