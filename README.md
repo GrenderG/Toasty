@@ -190,6 +190,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 	</tr>
 	<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus"><img src="https://lh3.googleusercontent.com/2HGejlGZgASHaLFdgeCjK3wbvRGn-CSdXuAUN3E8dzK61usHjn8TKTxR_V160avI-js7=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.controle.developer.hipercontrole">Caller+</a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus">Caller+</a></td>
 	</tr>
 </table>
