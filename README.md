@@ -117,14 +117,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 
 <table>
 	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.trivisionzero.chromophoto"><img src="https://lh3.googleusercontent.com/vmch41lYF_TKb1MKgtYrSgz2rKQ4T1EnGRCGpWSMqLRSzi_pgNWoZpw9WJE8UV4t614=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.trivisionzero.chromophoto">ChromoPhoto - Colorize B&W</a></td>
-	</tr>
-	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.serg.chuprin.tageditor"><img src="https://lh3.googleusercontent.com/2EYJPs-qBlKJ3L6cy7idQpzKfZkTzA2G4UQfbs-96VGMftQ-7aV4Dvj77ejzZlAAVx_C=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.serg.chuprin.tageditor">AutoTagger - редактор тегов.</a></td>
-	</tr>
-	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=cheetatech.com.colorhub"><img src="https://archive.org/download/ic_launcher_colorhub/ic_launcher_colorhub.png" width="64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=cheetatech.com.colorhub">ColorHub - Color Palette</a></td>
 	</tr>
@@ -164,10 +156,6 @@ Want to be here? Open an `issue` or make a `pull request`.
         <td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva"><img src="https://lh3.googleusercontent.com/u4zbQiMobr58biVKT67ka1N-cU_URBAdD6MDU2fGQYsWePvqH9UncMpGnWAFzczfSA=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva">Eva: Everything for Telegram</a></td>
 	</tr>
-	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=org.imperium.imperious.Pastebin"><img src="https://lh3.googleusercontent.com/zhky42kxZcdlt1u7D6lzc3Mwq0gV0nTiFdm-T3DygQVcNPOofNba3Q2_MWtqoJFgdF8a=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=org.imperium.imperious.Pastebin">Pastebin</a></td>
-	</tr>
 		<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.KillerBLS.modpeide"><img src="https://lh3.googleusercontent.com/nyB12hF6cPHBrm532qQQslvj-X-klmPlKuQ4Z0MYKDpt4sPVZmWYRZ_SShEfVcTmhg=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.KillerBLS.modpeide">ModPE IDE</a></td>
@@ -179,10 +167,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 	<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/XP-tvaGf-as9XMQ3kcUjohSZlSD7uyf_AcHsjq6jTI0chXWK1yQrnJJs2Y_Pvbe1FRQ=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub">OpenHub for GitHub</a></td>
-	</tr>
-		<tr>
-            <td><a href="https://play.google.com/store/apps/details?id=nl.overnightprojects.wakification"><img src="https://lh3.googleusercontent.com/cRV9ytg3rXnfNPBgpZLe0EJr2C8oF5VmZxipRDgFY0xJAl_cZ6JGxM90r4x_BNZbfsgn=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=nl.overnightprojects.wakification">Wakification</a></td>
 	</tr>
 		<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.controle.developer.hipercontrole"><img src="https://lh3.googleusercontent.com/muPax5lA3VC7LLIgFVYkO3zCqvW2qCG-6QVPLZHYDdCqrGAHRmE_-4PQN7zVohh4JnQ=w64"/></a></td>
