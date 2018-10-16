@@ -176,4 +176,8 @@ Want to be here? Open an `issue` or make a `pull request`.
             <td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus"><img src="https://lh3.googleusercontent.com/2HGejlGZgASHaLFdgeCjK3wbvRGn-CSdXuAUN3E8dzK61usHjn8TKTxR_V160avI-js7=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus">Caller+</a></td>
 	</tr>
+	<tr>
+            <td><a href="https://play.google.com/store/apps/details?id=org.openhab.habdroid"><img src="https://lh3.googleusercontent.com/RhinsfPN8qFHQDyPKssmiPl4P_-JJpw7GaQO4K7TVixMjrkZsPh0NPXlL2nJRrR4PAbw=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=org.openhab.habdroid">openHAB</a></td>
+	</tr>
 </table>
