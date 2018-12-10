@@ -84,11 +84,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toasty.Config.getInstance()
-                        .setTextColor(Color.GREEN)
                         .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
                         .apply();
                 Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
-                        Color.BLACK, Toasty.LENGTH_SHORT, true, true).show();
+                        Color.BLACK, Color.GREEN, Toasty.LENGTH_SHORT, true, true).show();
                 Toasty.Config.reset(); // Use this if you want to use the configuration above only once
             }
         });

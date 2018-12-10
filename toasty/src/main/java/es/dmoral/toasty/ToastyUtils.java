@@ -56,10 +56,7 @@ final class ToastyUtils {
             return context.getResources().getDrawable(id);
     }
 
-    static int getColor(@NonNull Context context, @ColorRes int color, @ColorInt int defaultColor){
-        if (defaultColor != -1)
-            return defaultColor;
-
+    static int getColor(@NonNull Context context, @ColorRes int color){
         if (Build.VERSION.SDK_INT >= 23)
             return context.getColor(color);
         else
