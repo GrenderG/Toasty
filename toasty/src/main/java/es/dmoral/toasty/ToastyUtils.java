@@ -9,6 +9,7 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 /**
@@ -50,16 +51,10 @@ final class ToastyUtils {
     }
 
     static Drawable getDrawable(@NonNull Context context, @DrawableRes int id) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-            return context.getDrawable(id);
-        else
-            return context.getResources().getDrawable(id);
+        return ContextCompat.getDrawable(context, id);
     }
 
     static int getColor(@NonNull Context context, @ColorRes int color){
-        if (Build.VERSION.SDK_INT >= 23)
-            return context.getColor(color);
-        else
-            return context.getResources().getColor(color);
+        return ContextCompat.getColor(context, color);
     }
 }
