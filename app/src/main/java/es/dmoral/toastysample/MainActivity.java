@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toasty.Config.getInstance()
                         .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
+                        .allowQueue(false)
                         .apply();
                 Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
                         Color.BLACK, Color.GREEN, Toasty.LENGTH_SHORT, true, true).show();
