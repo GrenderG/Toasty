@@ -37,14 +37,10 @@ This step is optional, but if you want you can configure some Toasty parameters.
 
 ```java
 Toasty.Config.getInstance()
-    .setErrorColor(@ColorInt int errorColor) // optional
-    .setInfoColor(@ColorInt int infoColor) // optional
-    .setSuccessColor(@ColorInt int successColor) // optional
-    .setWarningColor(@ColorInt int warningColor) // optional
-    .setTextColor(@ColorInt int textColor) // optional
     .tintIcon(boolean tintIcon) // optional (apply textColor also to the icon)
     .setToastTypeface(@NonNull Typeface typeface) // optional
     .setTextSize(int sizeInSp) // optional
+    .allowQueue(boolean allowQueue) // optional (prevents several Toastys from queuing)
     .apply(); // required
 ```
 

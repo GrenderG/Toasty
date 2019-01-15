@@ -281,6 +281,7 @@ public class Toasty {
                 duration, withIcon, shouldTint);
     }
 
+    @CheckResult
     public static Toast custom(@NonNull Context context, @StringRes int message, Drawable icon,
                                @ColorInt int tintColor, @ColorInt int textColor, int duration,
                                boolean withIcon, boolean shouldTint) {
