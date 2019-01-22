@@ -37,14 +37,10 @@ This step is optional, but if you want you can configure some Toasty parameters.
 
 ```java
 Toasty.Config.getInstance()
-    .setErrorColor(@ColorInt int errorColor) // optional
-    .setInfoColor(@ColorInt int infoColor) // optional
-    .setSuccessColor(@ColorInt int successColor) // optional
-    .setWarningColor(@ColorInt int warningColor) // optional
-    .setTextColor(@ColorInt int textColor) // optional
     .tintIcon(boolean tintIcon) // optional (apply textColor also to the icon)
     .setToastTypeface(@NonNull Typeface typeface) // optional
     .setTextSize(int sizeInSp) // optional
+    .allowQueue(boolean allowQueue) // optional (prevents several Toastys from queuing)
     .apply(); // required
 ```
 
@@ -184,4 +180,8 @@ Want to be here? Open an `issue` or make a `pull request`.
             <td><a href="https://play.google.com/store/apps/details?id=org.openhab.habdroid"><img src="https://lh3.googleusercontent.com/RhinsfPN8qFHQDyPKssmiPl4P_-JJpw7GaQO4K7TVixMjrkZsPh0NPXlL2nJRrR4PAbw=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=org.openhab.habdroid">openHAB</a></td>
 	</tr>
+	<tr>
+                <td><a href="https://play.google.com/store/apps/details?id=org.saarang.app"><img src="https://lh3.googleusercontent.com/m683OsEgBAU15kdHOSsl-lckDPEa0bdsK2xvhq3Qs4vww-ueJnW8xY0xXfwfMV6dOyE=w64"/></a></td>
+    		<td><a href="https://play.google.com/store/apps/details?id=org.saarang.app">Saarang</a></td>
+    	</tr>
 </table>
