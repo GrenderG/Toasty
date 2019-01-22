@@ -310,9 +310,7 @@ public class Toasty {
         if (withIcon) {
             if (icon == null)
                 throw new IllegalArgumentException("Avoid passing 'icon' as null if 'withIcon' is set to true");
-            if (tintIcon)
-                icon = ToastyUtils.tintIcon(icon, textColor);
-            ToastyUtils.setBackground(toastIcon, icon);
+            ToastyUtils.setBackground(toastIcon, tintIcon ? ToastyUtils.tintIcon(icon, textColor) : icon);
         } else {
             toastIcon.setVisibility(View.GONE);
         }
@@ -325,7 +323,8 @@ public class Toasty {
         currentToast.setView(toastLayout);
 
         if (!allowQueue){
-            if (lastToast != null) lastToast.cancel();
+            if (lastToast != null)
+                lastToast.cancel();
             lastToast = currentToast;
         }
 
