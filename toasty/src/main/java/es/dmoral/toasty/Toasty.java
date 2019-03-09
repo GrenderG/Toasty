@@ -294,7 +294,8 @@ public class Toasty {
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int tintColor, @ColorInt int textColor, int duration,
                                boolean withIcon, boolean shouldTint) {
-        final Toast currentToast = Toast.makeText(context, "", duration);
+        final Toast currentToast = new Toast(context);
+        currentToast.setDuration(duration);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.toast_layout, null);
         final ImageView toastIcon = toastLayout.findViewById(R.id.toast_icon);
