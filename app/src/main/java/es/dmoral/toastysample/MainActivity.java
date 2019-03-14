@@ -9,6 +9,7 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
 import android.view.View;
+import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
 
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         .allowQueue(false)
                         .apply();
                 Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
-                        Color.BLACK, Color.GREEN, Toasty.LENGTH_SHORT, true, true).show();
+                        android.R.color.black, android.R.color.holo_green_light, Toasty.LENGTH_SHORT, true, true).show();
                 Toasty.Config.reset(); // Use this if you want to use the configuration above only once
             }
         });

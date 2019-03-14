@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.CheckResult;
 import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
@@ -259,34 +260,36 @@ public class Toasty {
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @StringRes int message, @DrawableRes int iconRes,
-                               @ColorInt int tintColor, int duration,
+                               @ColorRes int tintColorRes, int duration,
                                boolean withIcon, boolean shouldTint) {
         return custom(context, context.getString(message), ToastyUtils.getDrawable(context, iconRes),
-                tintColor, ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, shouldTint);
+                ToastyUtils.getColor(context, tintColorRes), ToastyUtils.getColor(context, R.color.defaultTextColor),
+                duration, withIcon, shouldTint);
     }
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, @DrawableRes int iconRes,
-                               @ColorInt int tintColor, int duration,
+                               @ColorRes int tintColorRes, int duration,
                                boolean withIcon, boolean shouldTint) {
         return custom(context, message, ToastyUtils.getDrawable(context, iconRes),
-                tintColor, ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, shouldTint);
-    }
-
-    @CheckResult
-    public static Toast custom(@NonNull Context context, @StringRes int message, Drawable icon,
-                               @ColorInt int tintColor, int duration,
-                               boolean withIcon, boolean shouldTint) {
-        return custom(context, context.getString(message), icon, tintColor, ToastyUtils.getColor(context, R.color.defaultTextColor),
+                ToastyUtils.getColor(context, tintColorRes), ToastyUtils.getColor(context, R.color.defaultTextColor),
                 duration, withIcon, shouldTint);
     }
 
     @CheckResult
     public static Toast custom(@NonNull Context context, @StringRes int message, Drawable icon,
-                               @ColorInt int tintColor, @ColorInt int textColor, int duration,
+                               @ColorRes int tintColorRes, int duration,
                                boolean withIcon, boolean shouldTint) {
-        return custom(context, context.getString(message), icon, tintColor, textColor,
-                duration, withIcon, shouldTint);
+        return custom(context, context.getString(message), icon, ToastyUtils.getColor(context, tintColorRes),
+                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, shouldTint);
+    }
+
+    @CheckResult
+    public static Toast custom(@NonNull Context context, @StringRes int message, Drawable icon,
+                               @ColorRes int tintColorRes, @ColorRes int textColorRes, int duration,
+                               boolean withIcon, boolean shouldTint) {
+        return custom(context, context.getString(message), icon, ToastyUtils.getColor(context, tintColorRes),
+                ToastyUtils.getColor(context, textColorRes), duration, withIcon, shouldTint);
     }
 
     @SuppressLint("ShowToast")
