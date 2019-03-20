@@ -10,6 +10,7 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.content.res.AppCompatResources;
 import android.view.View;
 
 /**
@@ -51,7 +52,7 @@ final class ToastyUtils {
     }
 
     static Drawable getDrawable(@NonNull Context context, @DrawableRes int id) {
-        return ContextCompat.getDrawable(context, id);
+        return AppCompatResources.getDrawable(context, id);
     }
 
     static int getColor(@NonNull Context context, @ColorRes int color){

@@ -184,4 +184,8 @@ Want to be here? Open an `issue` or make a `pull request`.
                 <td><a href="https://play.google.com/store/apps/details?id=org.saarang.app"><img src="https://lh3.googleusercontent.com/m683OsEgBAU15kdHOSsl-lckDPEa0bdsK2xvhq3Qs4vww-ueJnW8xY0xXfwfMV6dOyE=w64"/></a></td>
     		<td><a href="https://play.google.com/store/apps/details?id=org.saarang.app">Saarang</a></td>
     	</tr>
+    <tr>
+                <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus"><img src="https://lh3.googleusercontent.com/LFUKgzu8S1V8TSLg3aiFoA7dkfUYmQg6s8lVUSPJYEkv6564UKjaUKhYcqvFMyDbSas=w64"/></a></td>
+            <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus">Kad ce mi bus - red voznje</a></td>
+    </tr>
 </table>
