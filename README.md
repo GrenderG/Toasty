@@ -137,8 +137,8 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=com.andreacioccarelli.fusemounter">Fusemounter</a></td>
 	</tr>
 	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords"><img src="https://lh3.googleusercontent.com/gdGrQHkHsfRAY9ivf8wt9vgaX9KPxpFHdFq5AXY_zw2P8Wat3KNstvf-BkNaKrNX8Qg=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords">BlueWords</a></td>
+        <td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords&referrer=utm_source%3Dgithub%26utm_medium%3Dtoasty%26utm_content%3Dlogo%26utm_campaign%3Dreadme"><img src="https://lh3.googleusercontent.com/gdGrQHkHsfRAY9ivf8wt9vgaX9KPxpFHdFq5AXY_zw2P8Wat3KNstvf-BkNaKrNX8Qg=w64"/></a></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords&referrer=utm_source%3Dgithub%26utm_medium%3Dtoasty%26utm_content%3Dname%26utm_campaign%3Dreadme">BlueWords</a></td>
 	</tr>
 	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.photos"><img src="https://lh3.googleusercontent.com/BgryiDdm8YVUaXbrGJG2PsIy61qBa92sXReVIpRy8y2xZxtU46c0tp2izjdhRcKRgbc=w64"/></a></td>
