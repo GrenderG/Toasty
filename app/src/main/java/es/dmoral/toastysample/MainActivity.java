@@ -1,6 +1,5 @@
 package es.dmoral.toastysample;
 
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -8,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         findViewById(R.id.button_error_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 Toasty.Config.getInstance()
                         .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
                         .allowQueue(false)
+                        .setToastyGravity(Toasty.ToastyGravity.newInstance(Gravity.CENTER, 0, 0))
                         .apply();
                 Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
                         android.R.color.black, android.R.color.holo_green_light, Toasty.LENGTH_SHORT, true, true).show();

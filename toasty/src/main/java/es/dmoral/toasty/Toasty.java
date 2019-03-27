@@ -43,6 +43,7 @@ public class Toasty {
     private static boolean tintIcon = true;
     private static boolean allowQueue = true;
 
+    private static ToastyGravity toastyGravity = null;
     private static Toast lastToast = null;
 
     public static final int LENGTH_SHORT = Toast.LENGTH_SHORT;
@@ -325,6 +326,12 @@ public class Toasty {
 
         currentToast.setView(toastLayout);
 
+
+        if (toastyGravity != null){
+            currentToast.setGravity(toastyGravity.getGravity(), toastyGravity.getxOffset(), toastyGravity.getyOffset());
+        }
+
+
         if (!allowQueue){
             if (lastToast != null)
                 lastToast.cancel();
@@ -341,6 +348,7 @@ public class Toasty {
         private boolean tintIcon = Toasty.tintIcon;
         private boolean allowQueue = true;
 
+        private ToastyGravity toastyGravity;
         private Config() {
             // avoiding instantiation
         }
@@ -355,6 +363,8 @@ public class Toasty {
             Toasty.textSize = 16;
             Toasty.tintIcon = true;
             Toasty.allowQueue = true;
+            Toasty.toastyGravity = null;
+
         }
 
         @CheckResult
@@ -381,11 +391,55 @@ public class Toasty {
             return this;
         }
 
+        @CheckResult
+        public Config setToastyGravity(ToastyGravity toastyGravity){
+            this.toastyGravity = toastyGravity;
+            return this;
+        }
+
         public void apply() {
             Toasty.currentTypeface = typeface;
             Toasty.textSize = textSize;
             Toasty.tintIcon = tintIcon;
             Toasty.allowQueue = allowQueue;
+            Toasty.toastyGravity = toastyGravity;
+        }
+    }
+
+    public static class ToastyGravity {
+        private int gravity;
+        private int xOffset;
+        private int yOffset;
+
+        private ToastyGravity(int gravity, int xOffset, int yOffset) {
+            this.gravity = gravity;
+            this.xOffset = xOffset;
+            this.yOffset = yOffset;
+        }
+
+        public static ToastyGravity newInstance(int gravity, int xOffset, int yOffset){
+            return new ToastyGravity(gravity, xOffset, yOffset);
+        }
+
+        public int getGravity() {
+            return gravity;
+        }
+
+        public int getxOffset() {
+            return xOffset;
+        }
+
+        public int getyOffset() {
+            return yOffset;
+        }
+
+        @Override
+        public String toString() {
+            return "ToastyGravity{" +
+                    "toastyGravity=" + gravity +
+                    ", xOffset=" + xOffset +
+                    ", yOffset=" + yOffset +
+                    '}';
         }
     }
 }
