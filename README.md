@@ -188,4 +188,19 @@ Want to be here? Open an `issue` or make a `pull request`.
                 <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus"><img src="https://lh3.googleusercontent.com/LFUKgzu8S1V8TSLg3aiFoA7dkfUYmQg6s8lVUSPJYEkv6564UKjaUKhYcqvFMyDbSas=w64"/></a></td>
             <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus">Kad ce mi bus - red voznje</a></td>
     </tr>
+	<tr>
+                <td><a href="https://play.google.com/store/apps/details?id=p32929.greatpostman"><img src="https://lh3.googleusercontent.com/ni-lk3b2nTMZyC7r1wYBW6cm9eYqGAN-t6fXV-kD0lSyw1lO3kenC1We71fZjSryvFII=w64"/></a></td>
+            <td><a href="https://play.google.com/store/apps/details?id=p32929.greatpostman">The Great Postman</a></td>
+    </tr>
+	<tr>
+                <td><a href="https://play.google.com/store/apps/details?id=p32929.lazyphone"><img src="https://lh3.googleusercontent.com/vvp6Ev33xPerWBBOtIRyAHl7k5c4wQ72hGwG3EU4JC-BTjfvb5DSJDeMABaRg0fy_KI=s64"/></a></td>
+            <td><a href="https://play.google.com/store/apps/details?id=p32929.lazyphone">Phone Addiction Controller</a></td>
+    </tr>
+	<tr>
+                <td><a href="https://play.google.com/store/apps/details?id=p32929.imfree">
+				<img src="https://lh3.googleusercontent.com/LIgX0ABT8z3MFILXFfrXK7vNO9j0hTxJ2aSdGwdcsdJUtViMWAsKXEiG65g94dV_i7JE=s64"/></a></td>
+            <td><a href="https://play.google.com/store/apps/details?id=p32929.imfree">I am free</a></td>
+    </tr>
+	
+
 </table>
