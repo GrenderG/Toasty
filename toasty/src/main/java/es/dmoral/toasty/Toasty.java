@@ -11,6 +11,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -42,6 +43,7 @@ public class Toasty {
 
     private static boolean tintIcon = true;
     private static boolean allowQueue = true;
+    private static int toastGravity = Gravity.BOTTOM;
 
     private static Toast lastToast = null;
 
@@ -331,6 +333,13 @@ public class Toasty {
             lastToast = currentToast;
         }
 
+        //heritageboy51
+        if(toastGravity== Gravity.BOTTOM || toastGravity==Gravity.TOP || toastGravity==Gravity.CENTER) {
+            currentToast.setGravity(toastGravity, 0, 0);
+        }else{
+            currentToast.setGravity(Gravity.BOTTOM, 0, 0);
+        }
+
         return currentToast;
     }
 
@@ -340,6 +349,7 @@ public class Toasty {
 
         private boolean tintIcon = Toasty.tintIcon;
         private boolean allowQueue = true;
+        private int toastGravity = Toasty.toastGravity;
 
         private Config() {
             // avoiding instantiation
@@ -355,6 +365,7 @@ public class Toasty {
             Toasty.textSize = 16;
             Toasty.tintIcon = true;
             Toasty.allowQueue = true;
+            Toasty.toastGravity = Gravity.BOTTOM;
         }
 
         @CheckResult
@@ -381,11 +392,18 @@ public class Toasty {
             return this;
         }
 
+        @CheckResult
+        public Config toastyGravity(int gravity){
+            this.toastGravity = gravity;
+            return this;
+        }
+
         public void apply() {
             Toasty.currentTypeface = typeface;
             Toasty.textSize = textSize;
             Toasty.tintIcon = tintIcon;
             Toasty.allowQueue = allowQueue;
+            Toasty.toastGravity = toastGravity;
         }
     }
 }
