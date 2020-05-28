@@ -119,6 +119,10 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=cheetatech.com.colorhub">ColorHub - Color Palette</a></td>
 	</tr>
 	<tr>
+        <td><a href="https://play.google.com/store/apps/details?id=com.katyayini.hidefiles"><img src="https://lh3.googleusercontent.com/hq2dLHXjKoTonzE45uJKzkGfCUSSh0_IJZBnuRIyb8G_EbcpYT5_gPv942yrIKlyo12r=s64-rw"/></a></td>
+    	<td><a href="https://play.google.com/store/apps/details?id=com.fa.touch.free">Hide Files</a></td>
+    </tr>
+	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=com.fa.touch.free"><img src="https://lh3.googleusercontent.com/Z9tz0izoW0CuBS59w9hbxbn3a7cSSwZUeGr1o9TpapngTKb4MKaGunZP-B306CxBAI8=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.fa.touch.free">Touch for Facebook</a></td>
 	</tr>
