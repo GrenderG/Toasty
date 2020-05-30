@@ -190,4 +190,8 @@ Want to be here? Open an `issue` or make a `pull request`.
                 <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus"><img src="https://lh3.googleusercontent.com/LFUKgzu8S1V8TSLg3aiFoA7dkfUYmQg6s8lVUSPJYEkv6564UKjaUKhYcqvFMyDbSas=w64"/></a></td>
             <td><a href="https://play.google.com/store/apps/details?id=com.dizdarevic.kadcemibus">Kad ce mi bus - red voznje</a></td>
     </tr>
+    <tr>
+            <td><a href="https://play.google.com/store/apps/details?id=com.katyayini.hidefiles"><img src="https://lh3.googleusercontent.com/hq2dLHXjKoTonzE45uJKzkGfCUSSh0_IJZBnuRIyb8G_EbcpYT5_gPv942yrIKlyo12r=s64-rw"/></a></td>
+        	<td><a href="https://play.google.com/store/apps/details?id=com.katyayini.hidefiles">Hide Files</a></td>
+        </tr>
 </table>
