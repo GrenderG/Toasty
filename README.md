@@ -119,10 +119,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=cheetatech.com.colorhub">ColorHub - Color Palette</a></td>
 	</tr>
 	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.fa.touch.free"><img src="https://lh3.googleusercontent.com/Z9tz0izoW0CuBS59w9hbxbn3a7cSSwZUeGr1o9TpapngTKb4MKaGunZP-B306CxBAI8=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.fa.touch.free">Touch for Facebook</a></td>
-	</tr>
-	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=com.fa.daily.free"><img src="https://lh3.googleusercontent.com/rXB22UBHujsK2uYpN-kAkVFBjTcnAp6ltSZYf9-LdYvRkM-kF-xtwPwR8kEInhludA=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.fa.daily.free">Daily – News flipped around</a></td>
 	</tr>
@@ -143,20 +139,12 @@ Want to be here? Open an `issue` or make a `pull request`.
 		<td><a href="https://play.google.com/store/apps/details?id=com.thesrb.bluewords&referrer=utm_source%3Dgithub%26utm_medium%3Dtoasty%26utm_content%3Dname%26utm_campaign%3Dreadme">BlueWords</a></td>
 	</tr>
 	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.photos"><img src="https://lh3.googleusercontent.com/BgryiDdm8YVUaXbrGJG2PsIy61qBa92sXReVIpRy8y2xZxtU46c0tp2izjdhRcKRgbc=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.photos">Levipic - Photo Gallery & Map</a></td>
-	</tr>
-	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.instagram_map"><img src="https://lh3.googleusercontent.com/QL0QDLXBm9j2Y2An4MOZtlbI02yx_zuI7I3vMBM_mBO_BbimNKjBQeldQBBKo0P60Og=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.levionsoftware.instagram_map">Photo Map - Photo and Video Gallery</a></td>
 	</tr>
 	<tr>
         <td><a href="https://play.google.com/store/apps/details?id=com.sunshine.makilite"><img src="https://lh3.googleusercontent.com/RL082J8D9AyVJdyoT8sN8Mb47LUJEn3ssvp8jgrke_K_sWAXgEl9F8tjudqDoL7y5A0=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.makilite">Maki for Facebook & Twitter</a></td>
-	</tr>
-	<tr>
-        <td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva"><img src="https://lh3.googleusercontent.com/u4zbQiMobr58biVKT67ka1N-cU_URBAdD6MDU2fGQYsWePvqH9UncMpGnWAFzczfSA=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.sunshine.eva">Eva: Everything for Telegram</a></td>
 	</tr>
 		<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.KillerBLS.modpeide"><img src="https://lh3.googleusercontent.com/nyB12hF6cPHBrm532qQQslvj-X-klmPlKuQ4Z0MYKDpt4sPVZmWYRZ_SShEfVcTmhg=w64"/></a></td>
@@ -169,14 +157,6 @@ Want to be here? Open an `issue` or make a `pull request`.
 	<tr>
             <td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub"><img src="https://lh3.googleusercontent.com/XP-tvaGf-as9XMQ3kcUjohSZlSD7uyf_AcHsjq6jTI0chXWK1yQrnJJs2Y_Pvbe1FRQ=w64"/></a></td>
 		<td><a href="https://play.google.com/store/apps/details?id=com.thirtydegreesray.openhub">OpenHub for GitHub</a></td>
-	</tr>
-		<tr>
-            <td><a href="https://play.google.com/store/apps/details?id=com.controle.developer.hipercontrole"><img src="https://lh3.googleusercontent.com/muPax5lA3VC7LLIgFVYkO3zCqvW2qCG-6QVPLZHYDdCqrGAHRmE_-4PQN7zVohh4JnQ=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.controle.developer.hipercontrole">AUTO Controle</a></td>
-	</tr>
-	<tr>
-            <td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus"><img src="https://lh3.googleusercontent.com/2HGejlGZgASHaLFdgeCjK3wbvRGn-CSdXuAUN3E8dzK61usHjn8TKTxR_V160avI-js7=w64"/></a></td>
-		<td><a href="https://play.google.com/store/apps/details?id=com.mphone.callerplus">Caller+</a></td>
 	</tr>
 	<tr>
             <td><a href="https://play.google.com/store/apps/details?id=org.openhab.habdroid"><img src="https://lh3.googleusercontent.com/RhinsfPN8qFHQDyPKssmiPl4P_-JJpw7GaQO4K7TVixMjrkZsPh0NPXlL2nJRrR4PAbw=w64"/></a></td>
