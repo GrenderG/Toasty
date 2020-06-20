@@ -175,7 +175,7 @@ Want to be here? Open an `issue` or make a `pull request`.
         	<td><a href="https://play.google.com/store/apps/details?id=com.katyayini.hidefiles">Hide Files</a></td>
         </tr>
     	<tr>
-            <td><a href="https://github.com/nikothegreek/logviewer-for-openhab-app"><img src="https://i.imgur.com/a6RbPkJ.png" width="64" height="64"/></a></td>
+            <td><a href="https://github.com/nikothegreek/logviewer-for-openhab-app"><img src="https://i.imgur.com/a6RbPkJ.png"/></a></td>
         	<td><a href="https://github.com/nikothegreek/logviewer-for-openhab-app">LogViewer for openHAB</a></td>
         </tr>
 </table>
