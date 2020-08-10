@@ -4,12 +4,14 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+
 import androidx.annotation.CheckResult;
 import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +52,10 @@ public class Toasty {
 
     private Toasty() {
         // avoiding instantiation
+    }
+
+    static {
+        ToastyUtils.toastBugFix();
     }
 
     @CheckResult
@@ -325,7 +331,7 @@ public class Toasty {
 
         currentToast.setView(toastLayout);
 
-        if (!allowQueue){
+        if (!allowQueue) {
             if (lastToast != null)
                 lastToast.cancel();
             lastToast = currentToast;
