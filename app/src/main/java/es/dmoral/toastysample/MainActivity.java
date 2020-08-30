@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
+import android.view.Gravity;
 import android.view.View;
 
 import es.dmoral.toasty.Toasty;
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 Toasty.Config.getInstance()
                         .setToastTypeface(Typeface.createFromAsset(getAssets(), "PCap Terminal.otf"))
                         .allowQueue(false)
+                        .toastyGravity(Gravity.CENTER)//newly added
                         .apply();
                 Toasty.custom(MainActivity.this, R.string.custom_message, getResources().getDrawable(R.drawable.laptop512),
                         android.R.color.black, android.R.color.holo_green_light, Toasty.LENGTH_SHORT, true, true).show();
