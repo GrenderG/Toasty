@@ -26,4 +26,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.appcompat:appcompat:$supportLibVersion"
+    implementation 'github.ryuunoakaihitomi.retoast:retoast:1.1.0'
 }
