@@ -338,14 +338,13 @@ public class Toasty {
 
     private static Toast normalWithDarkThemeSupport(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                                     int duration, boolean withIcon) {
-        if (supportDarkTheme && Build.VERSION.SDK_INT >= 30) {
+        if (supportDarkTheme && Build.VERSION.SDK_INT >= 29) {
             int uiMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
             if (uiMode == Configuration.UI_MODE_NIGHT_NO) {
                 return withLightTheme(context, message, icon, duration, withIcon);
             }
             return withDarkTheme(context, message, icon, duration, withIcon);
         } else {
-            /* Consistent with original behavior. */
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
                 return withLightTheme(context, message, icon, duration, withIcon);
             } else {
