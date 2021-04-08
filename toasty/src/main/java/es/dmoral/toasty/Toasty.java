@@ -2,20 +2,23 @@ package es.dmoral.toasty;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.CheckResult;
-import androidx.annotation.ColorInt;
-import androidx.annotation.ColorRes;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
+import android.os.Build;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.CheckResult;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 /**
  * This file is part of Toasty.
@@ -42,6 +45,7 @@ public class Toasty {
 
     private static boolean tintIcon = true;
     private static boolean allowQueue = true;
+    private static boolean supportDarkTheme = true;
 
     private static Toast lastToast = null;
 
@@ -97,15 +101,13 @@ public class Toasty {
     @CheckResult
     public static Toast normal(@NonNull Context context, @StringRes int message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, context.getString(message), icon, ToastyUtils.getColor(context, R.color.normalColor),
-                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
+        return normalWithDarkThemeSupport(context, context.getString(message), icon, duration, withIcon);
     }
 
     @CheckResult
     public static Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.normalColor),
-                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
+        return normalWithDarkThemeSupport(context, message, icon, duration, withIcon);
     }
 
     @CheckResult
@@ -325,7 +327,7 @@ public class Toasty {
 
         currentToast.setView(toastLayout);
 
-        if (!allowQueue){
+        if (!allowQueue) {
             if (lastToast != null)
                 lastToast.cancel();
             lastToast = currentToast;
@@ -334,12 +336,43 @@ public class Toasty {
         return currentToast;
     }
 
+    private static Toast normalWithDarkThemeSupport(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                                    int duration, boolean withIcon) {
+        if (supportDarkTheme && Build.VERSION.SDK_INT >= 30) {
+            int uiMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+            if (uiMode == Configuration.UI_MODE_NIGHT_NO) {
+                return withLightTheme(context, message, icon, duration, withIcon);
+            }
+            return withDarkTheme(context, message, icon, duration, withIcon);
+        } else {
+            /* Consistent with original behavior. */
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+                return withLightTheme(context, message, icon, duration, withIcon);
+            } else {
+                return withDarkTheme(context, message, icon, duration, withIcon);
+            }
+        }
+    }
+
+    private static Toast withLightTheme(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                        int duration, boolean withIcon) {
+        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.defaultTextColor),
+                ToastyUtils.getColor(context, R.color.normalColor), duration, withIcon, true);
+    }
+
+    private static Toast withDarkTheme(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                       int duration, boolean withIcon) {
+        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.normalColor),
+                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
+    }
+
     public static class Config {
         private Typeface typeface = Toasty.currentTypeface;
         private int textSize = Toasty.textSize;
 
         private boolean tintIcon = Toasty.tintIcon;
         private boolean allowQueue = true;
+        private boolean supportDarkTheme = true;
 
         private Config() {
             // avoiding instantiation
@@ -355,6 +388,7 @@ public class Toasty {
             Toasty.textSize = 16;
             Toasty.tintIcon = true;
             Toasty.allowQueue = true;
+            Toasty.supportDarkTheme = true;
         }
 
         @CheckResult
@@ -381,11 +415,18 @@ public class Toasty {
             return this;
         }
 
+        @CheckResult
+        public Config supportDarkTheme(boolean supportDarkTheme) {
+            this.supportDarkTheme = supportDarkTheme;
+            return this;
+        }
+
         public void apply() {
             Toasty.currentTypeface = typeface;
             Toasty.textSize = textSize;
             Toasty.tintIcon = tintIcon;
             Toasty.allowQueue = allowQueue;
+            Toasty.supportDarkTheme = supportDarkTheme;
         }
     }
 }
