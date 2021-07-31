@@ -43,6 +43,7 @@ Toasty.Config.getInstance()
     .setToastTypeface(@NonNull Typeface typeface) // optional
     .setTextSize(int sizeInSp) // optional
     .allowQueue(boolean allowQueue) // optional (prevents several Toastys from queuing)
+    .setRTL(boolean isRTL) // optional (icon is on the right)
     .apply(); // required
 ```
 
