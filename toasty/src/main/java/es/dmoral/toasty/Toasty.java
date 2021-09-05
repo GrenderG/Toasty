@@ -2,6 +2,7 @@ package es.dmoral.toasty;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.CheckResult;
@@ -10,11 +11,13 @@ import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+import android.os.Build;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +49,8 @@ public class Toasty {
     private static int toastGravity = Gravity.BOTTOM;
     private static int xOffset = 0;
     private static int yOffset = 0;
+    private static boolean supportDarkTheme = true;
+    private static boolean isRTL = false;
 
     private static Toast lastToast = null;
 
@@ -101,15 +106,13 @@ public class Toasty {
     @CheckResult
     public static Toast normal(@NonNull Context context, @StringRes int message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, context.getString(message), icon, ToastyUtils.getColor(context, R.color.normalColor),
-                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
+        return normalWithDarkThemeSupport(context, context.getString(message), icon, duration, withIcon);
     }
 
     @CheckResult
     public static Toast normal(@NonNull Context context, @NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
-        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.normalColor),
-                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
+        return normalWithDarkThemeSupport(context, message, icon, duration, withIcon);
     }
 
     @CheckResult
@@ -304,6 +307,7 @@ public class Toasty {
         final Toast currentToast = Toast.makeText(context, "", duration);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.toast_layout, null);
+        final LinearLayout toastRoot = toastLayout.findViewById(R.id.toast_root);
         final ImageView toastIcon = toastLayout.findViewById(R.id.toast_icon);
         final TextView toastTextView = toastLayout.findViewById(R.id.toast_text);
         Drawable drawableFrame;
@@ -317,6 +321,8 @@ public class Toasty {
         if (withIcon) {
             if (icon == null)
                 throw new IllegalArgumentException("Avoid passing 'icon' as null if 'withIcon' is set to true");
+            if (isRTL && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+                toastRoot.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             ToastyUtils.setBackground(toastIcon, tintIcon ? ToastyUtils.tintIcon(icon, textColor) : icon);
         } else {
             toastIcon.setVisibility(View.GONE);
@@ -329,15 +335,44 @@ public class Toasty {
 
         currentToast.setView(toastLayout);
 
-        if (!allowQueue){
+        if (!allowQueue) {
             if (lastToast != null)
                 lastToast.cancel();
             lastToast = currentToast;
         }
 
-        currentToast.setGravity(toastGravity,xOffset,yOffset);
+        currentToast.setGravity(toastGravity, xOffset, yOffset);
 
         return currentToast;
+    }
+
+    private static Toast normalWithDarkThemeSupport(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                                    int duration, boolean withIcon) {
+        if (supportDarkTheme && Build.VERSION.SDK_INT >= 29) {
+            int uiMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+            if (uiMode == Configuration.UI_MODE_NIGHT_NO) {
+                return withLightTheme(context, message, icon, duration, withIcon);
+            }
+            return withDarkTheme(context, message, icon, duration, withIcon);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+                return withLightTheme(context, message, icon, duration, withIcon);
+            } else {
+                return withDarkTheme(context, message, icon, duration, withIcon);
+            }
+        }
+    }
+
+    private static Toast withLightTheme(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                        int duration, boolean withIcon) {
+        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.defaultTextColor),
+                ToastyUtils.getColor(context, R.color.normalColor), duration, withIcon, true);
+    }
+
+    private static Toast withDarkTheme(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+                                       int duration, boolean withIcon) {
+        return custom(context, message, icon, ToastyUtils.getColor(context, R.color.normalColor),
+                ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true);
     }
 
     public static class Config {
@@ -349,6 +384,9 @@ public class Toasty {
         private int toastGravity = Toasty.toastGravity;
         private int xOffset = Toasty.xOffset;
         private int yOffset = Toasty.yOffset;
+        private boolean supportDarkTheme = true;
+        private boolean isRTL = false;
+
         private Config() {
             // avoiding instantiation
         }
@@ -366,6 +404,8 @@ public class Toasty {
             Toasty.toastGravity = Gravity.BOTTOM;
             Toasty.xOffset = 0;
             Toasty.yOffset = 0;
+            Toasty.supportDarkTheme = true;
+            Toasty.isRTL = false;
         }
 
         @CheckResult
@@ -391,16 +431,29 @@ public class Toasty {
             this.allowQueue = allowQueue;
             return this;
         }
+      
         @CheckResult
-        public Config toastyGravity(int gravity, int xOffset, int yOffset){
+        public Config setGravity(int gravity, int xOffset, int yOffset) {
             this.toastGravity = gravity;
             this.xOffset = xOffset;
             this.yOffset = yOffset;
             return this;
         }
+      
         @CheckResult
-        public Config toastyGravity(int gravity){
+        public Config setGravity(int gravity) {
             this.toastGravity = gravity;
+            return this;
+        }
+
+        @CheckResult
+        public Config supportDarkTheme(boolean supportDarkTheme) {
+            this.supportDarkTheme = supportDarkTheme;
+            return this;
+        }
+         
+        public Config setRTL(boolean isRTL) {
+            this.isRTL = isRTL;
             return this;
         }
 
@@ -412,6 +465,8 @@ public class Toasty {
             Toasty.toastGravity = toastGravity;
             Toasty.xOffset = xOffset;
             Toasty.yOffset = yOffset;
+            Toasty.supportDarkTheme = supportDarkTheme;
+            Toasty.isRTL = isRTL;
         }
     }
 }
