@@ -303,7 +303,7 @@ public class Toasty {
         final Toast currentToast = Toast.makeText(context, "", duration);
         final View toastLayout = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.toast_layout, null);
-        final LinearLayout toast_root = toastLayout.findViewById(R.id.toast_root);
+        final LinearLayout toastRoot = toastLayout.findViewById(R.id.toast_root);
         final ImageView toastIcon = toastLayout.findViewById(R.id.toast_icon);
         final TextView toastTextView = toastLayout.findViewById(R.id.toast_text);
         Drawable drawableFrame;
@@ -318,7 +318,7 @@ public class Toasty {
             if (icon == null)
                 throw new IllegalArgumentException("Avoid passing 'icon' as null if 'withIcon' is set to true");
             if (isRTL && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
-                toast_root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+                toastRoot.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             ToastyUtils.setBackground(toastIcon, tintIcon ? ToastyUtils.tintIcon(icon, textColor) : icon);
         } else {
             toastIcon.setVisibility(View.GONE);
