@@ -29,7 +29,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.GrenderG:Toasty:1.5.0'
+	implementation 'com.github.GrenderG:Toasty:1.5.2'
 }
 ```
 
@@ -43,6 +43,8 @@ Toasty.Config.getInstance()
     .setToastTypeface(@NonNull Typeface typeface) // optional
     .setTextSize(int sizeInSp) // optional
     .allowQueue(boolean allowQueue) // optional (prevents several Toastys from queuing)
+    .setGravity(boolean isRTL, int xOffset, int yOffset) // optional (set toast gravity, offsets are optional)
+    .supportDarkTheme(boolean isRTL) // optional (whether to support dark theme or not)
     .setRTL(boolean isRTL) // optional (icon is on the right)
     .apply(); // required
 ```
