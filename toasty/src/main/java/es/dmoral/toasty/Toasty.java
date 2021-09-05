@@ -342,7 +342,7 @@ public class Toasty {
 
         // Make sure to use default values for non-specified ones.
         currentToast.setGravity(
-                toastGravity  == -1 ? currentToast.getGravity() : toastGravity,
+                toastGravity == -1 ? currentToast.getGravity() : toastGravity,
                 xOffset == -1 ? currentToast.getXOffset() : xOffset,
                 yOffset == -1 ? currentToast.getYOffset() : yOffset
         );
