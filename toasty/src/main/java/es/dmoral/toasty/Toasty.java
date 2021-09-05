@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import android.os.Build;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -45,6 +46,9 @@ public class Toasty {
 
     private static boolean tintIcon = true;
     private static boolean allowQueue = true;
+    private static int toastGravity = Gravity.BOTTOM;
+    private static int xOffset = 0;
+    private static int yOffset = 0;
     private static boolean supportDarkTheme = true;
     private static boolean isRTL = false;
 
@@ -337,6 +341,8 @@ public class Toasty {
             lastToast = currentToast;
         }
 
+        currentToast.setGravity(toastGravity, xOffset, yOffset);
+
         return currentToast;
     }
 
@@ -375,6 +381,9 @@ public class Toasty {
 
         private boolean tintIcon = Toasty.tintIcon;
         private boolean allowQueue = true;
+        private int toastGravity = Toasty.toastGravity;
+        private int xOffset = Toasty.xOffset;
+        private int yOffset = Toasty.yOffset;
         private boolean supportDarkTheme = true;
         private boolean isRTL = false;
 
@@ -392,6 +401,9 @@ public class Toasty {
             Toasty.textSize = 16;
             Toasty.tintIcon = true;
             Toasty.allowQueue = true;
+            Toasty.toastGravity = Gravity.BOTTOM;
+            Toasty.xOffset = 0;
+            Toasty.yOffset = 0;
             Toasty.supportDarkTheme = true;
             Toasty.isRTL = false;
         }
@@ -419,6 +431,20 @@ public class Toasty {
             this.allowQueue = allowQueue;
             return this;
         }
+      
+        @CheckResult
+        public Config setGravity(int gravity, int xOffset, int yOffset) {
+            this.toastGravity = gravity;
+            this.xOffset = xOffset;
+            this.yOffset = yOffset;
+            return this;
+        }
+      
+        @CheckResult
+        public Config setGravity(int gravity) {
+            this.toastGravity = gravity;
+            return this;
+        }
 
         @CheckResult
         public Config supportDarkTheme(boolean supportDarkTheme) {
@@ -436,6 +462,9 @@ public class Toasty {
             Toasty.textSize = textSize;
             Toasty.tintIcon = tintIcon;
             Toasty.allowQueue = allowQueue;
+            Toasty.toastGravity = toastGravity;
+            Toasty.xOffset = xOffset;
+            Toasty.yOffset = yOffset;
             Toasty.supportDarkTheme = supportDarkTheme;
             Toasty.isRTL = isRTL;
         }
