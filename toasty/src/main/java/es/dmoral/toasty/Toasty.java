@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import android.os.Build;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -46,9 +45,9 @@ public class Toasty {
 
     private static boolean tintIcon = true;
     private static boolean allowQueue = true;
-    private static int toastGravity = Gravity.BOTTOM;
-    private static int xOffset = 0;
-    private static int yOffset = 0;
+    private static int toastGravity = -1;
+    private static int xOffset = -1;
+    private static int yOffset = -1;
     private static boolean supportDarkTheme = true;
     private static boolean isRTL = false;
 
@@ -341,7 +340,12 @@ public class Toasty {
             lastToast = currentToast;
         }
 
-        currentToast.setGravity(toastGravity, xOffset, yOffset);
+        // Make sure to use default values for non-specified ones.
+        currentToast.setGravity(
+                toastGravity  == -1 ? currentToast.getGravity() : toastGravity,
+                xOffset == -1 ? currentToast.getXOffset() : xOffset,
+                yOffset == -1 ? currentToast.getYOffset() : yOffset
+        );
 
         return currentToast;
     }
@@ -401,9 +405,9 @@ public class Toasty {
             Toasty.textSize = 16;
             Toasty.tintIcon = true;
             Toasty.allowQueue = true;
-            Toasty.toastGravity = Gravity.BOTTOM;
-            Toasty.xOffset = 0;
-            Toasty.yOffset = 0;
+            Toasty.toastGravity = -1;
+            Toasty.xOffset = -1;
+            Toasty.yOffset = -1;
             Toasty.supportDarkTheme = true;
             Toasty.isRTL = false;
         }
