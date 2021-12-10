@@ -3,6 +3,7 @@
     <string name="normal_toast_with_icon">NORMAL TOAST (WITH ICON)</string>
     <string name="normal_toast_without_icon">NORMAL TOAST (WITHOUT ICON)</string>
     <string name="warning_toast">WARNING TOAST</string>
+    <string name="shadow_toast">DROP SHADOW TOAST</string>
     <string name="info_toast">INFO TOAST</string>
     <string name="info_toast_with_formatting">INFO TOAST WITH FORMATTING</string>
     <string name="error_toast">ERROR TOAST</string>
@@ -13,6 +14,7 @@
     <string name="success_message">Success!</string>
     <string name="info_message">Here is some info for you.</string>
     <string name="warning_message">Beware of the dog.</string>
+    <string name="shadow_message">This has a drop shadow.</string>
     <string name="normal_message_without_icon">Normal toast w/o icon</string>
     <string name="normal_message_with_icon">Normal toast w/ icon</string>
     <string name="custom_message">sudo kill -9 everyone</string>

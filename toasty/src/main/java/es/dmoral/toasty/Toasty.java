@@ -50,6 +50,7 @@ public class Toasty {
     private static int yOffset = -1;
     private static boolean supportDarkTheme = true;
     private static boolean isRTL = false;
+    private static ShadowOptions shadowOptions = ShadowOptions.NONE;
 
     private static Toast lastToast = null;
 
@@ -298,6 +299,7 @@ public class Toasty {
                 ToastyUtils.getColor(context, textColorRes), duration, withIcon, shouldTint);
     }
 
+
     @SuppressLint("ShowToast")
     @CheckResult
     public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
@@ -331,6 +333,11 @@ public class Toasty {
         toastTextView.setTextColor(textColor);
         toastTextView.setTypeface(currentTypeface);
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+        toastTextView.setShadowLayer(
+                shadowOptions.getRadius(),
+                shadowOptions.getDx(),
+                shadowOptions.getDy(),
+                shadowOptions.getColor());
 
         currentToast.setView(toastLayout);
 
@@ -390,6 +397,8 @@ public class Toasty {
         private int yOffset = Toasty.yOffset;
         private boolean supportDarkTheme = true;
         private boolean isRTL = false;
+        private ShadowOptions shadowOptions = Toasty.shadowOptions;
+
 
         private Config() {
             // avoiding instantiation
@@ -410,6 +419,7 @@ public class Toasty {
             Toasty.yOffset = -1;
             Toasty.supportDarkTheme = true;
             Toasty.isRTL = false;
+            Toasty.shadowOptions = ShadowOptions.NONE;
         }
 
         @CheckResult
@@ -455,7 +465,14 @@ public class Toasty {
             this.supportDarkTheme = supportDarkTheme;
             return this;
         }
-         
+
+        @CheckResult
+        public Config setShadow(ShadowOptions shadowOptions) {
+            this.shadowOptions = shadowOptions;
+            return this;
+        }
+
+        @CheckResult
         public Config setRTL(boolean isRTL) {
             this.isRTL = isRTL;
             return this;
@@ -471,6 +488,7 @@ public class Toasty {
             Toasty.yOffset = yOffset;
             Toasty.supportDarkTheme = supportDarkTheme;
             Toasty.isRTL = isRTL;
+            Toasty.shadowOptions = shadowOptions;
         }
     }
 }

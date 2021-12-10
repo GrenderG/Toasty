@@ -9,6 +9,7 @@ import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
 import android.view.View;
 
+import es.dmoral.toasty.ShadowOptions;
 import es.dmoral.toasty.Toasty;
 
 import static android.graphics.Typeface.BOLD_ITALIC;
@@ -58,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toasty.warning(MainActivity.this, R.string.warning_message, Toasty.LENGTH_SHORT, true).show();
+            }
+        });
+        findViewById(R.id.button_shadow_toast).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.Config.getInstance().setShadow(ShadowOptions.DROP_SHADOW).apply();
+                Toasty.warning(MainActivity.this, R.string.shadow_message, Toasty.LENGTH_SHORT, true).show();
+                Toasty.Config.reset();
             }
         });
         findViewById(R.id.button_normal_toast_wo_icon).setOnClickListener(new View.OnClickListener() {
