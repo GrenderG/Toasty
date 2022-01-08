@@ -43,7 +43,7 @@ Toasty.Config.getInstance()
     .setToastTypeface(@NonNull Typeface typeface) // optional
     .setTextSize(int sizeInSp) // optional
     .allowQueue(boolean allowQueue) // optional (prevents several Toastys from queuing)
-    .setGravity(boolean isRTL, int xOffset, int yOffset) // optional (set toast gravity, offsets are optional)
+    .setGravity(int gravity, int xOffset, int yOffset) // optional (set toast gravity, offsets are optional)
     .supportDarkTheme(boolean isRTL) // optional (whether to support dark theme or not)
     .setRTL(boolean isRTL) // optional (icon is on the right)
     .apply(); // required
