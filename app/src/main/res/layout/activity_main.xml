@@ -59,21 +59,32 @@
             android:layout_alignParentEnd="true" />
 
         <Button
-            android:text="@string/warning_toast"
+            android:id="@+id/button_warning_toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button_info_toast_with_formatting"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/button_warning_toast" />
+            android:layout_alignParentRight="true"
+            android:text="@string/warning_toast" />
+
+        <Button
+            android:id="@+id/button_shadow_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_warning_toast"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/shadow_toast" />
 
         <Button
             android:text="@string/normal_toast_without_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_warning_toast"
+            android:layout_below="@+id/button_shadow_toast"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/button_normal_toast_wo_icon"
